@@ -1,7 +1,7 @@
 import './App.css';
 import EditorComponent from './components/EditorComponent'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import ForumComponent from './components/ForumComponent';
+import ForumComponent from './components/forum/ForumComponent';
 
 
 
