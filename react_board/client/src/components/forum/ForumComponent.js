@@ -19,7 +19,7 @@ const ForumComponent = (props) => {
   const removeTag = (strTag) => {
     return strTag
       .replace(/<br\/>/gi, "\n")
-      .replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi, "");
+      .replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/gi, ""); // 태그 제거
   };
 
   function addTable() {
