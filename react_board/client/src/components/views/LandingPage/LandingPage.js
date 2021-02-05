@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import {reactRouter, withRouter} from 'react-router-dom'
+import {Link, reactRouter, withRouter} from 'react-router-dom'
+
 function LandingPage(props) {
   useEffect(() => {
     axios.get("/api/hello").then((response) => {
@@ -19,7 +20,7 @@ function LandingPage(props) {
     })
   }
 
-
+  
 
   return (
     <div
@@ -29,12 +30,15 @@ function LandingPage(props) {
         alignItems: "center",
         width: "100%",
         height: "100vh",
-      }}>
+        flexDirection:'column'
+      }}>      
       <h2>시작 페이지</h2>
 
       <button onClick={onClickHandler}>
         로그아웃        
       </button>
+      <br/>
+      <Link to="/register">회원가입</Link>
       
     </div>
   );
