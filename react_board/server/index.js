@@ -6,9 +6,8 @@ const cookieParser = require("cookie-parser");
 const { auth } = require("./middleware/auth");
 const { User } = require("./models/User");
 const config = require("./config/key");
-const nodemailer = require('nodemailer');
-const smtpTransporter = require('nodemailer-smtp-transport');
-
+const nodemailer = require("nodemailer");
+const smtpTransporter = require("nodemailer-smtp-transport");
 
 // application/x-www-form-urlencoded 형태
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -91,20 +90,13 @@ app.get("/api/users/logout", auth, (req, res) => {
   });
 });
 
-
-
-
-
-
-
 app.get("/", (req, res) => {
   res.send("Hello");
 });
 
 app.get("/api/hello", (req, res) => {
-  res.send("hello react!")
+  res.send("hello react!");
 });
-
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
@@ -112,3 +104,61 @@ app.listen(port, () => {
 
 // 클라이언트에서 보내주는 데이터를 Body-parser를 이용해 받을 수 있음
 // postman을 이용해 api테스트 -> 지금 클라이언트가 없으니까.
+
+/* 
+1. 미들웨어는 순서대로 작동,
+2. next가 있어야 넘어감,
+3. 에러 발생시 next(err)로 넘겨줘야 에러 핸들링 미들웨어로 작동
+4. 안그러면 에러 핸들링 미들웨어를 지나쳐감
+
+
+app.use(function(req, res, next){ 
+  console.log('\n\nCATANP');
+  next(); 
+});
+
+app.get('/a', function(req, res){ 
+  console.log('/a: route terminated'); 
+  res.send('a'); 
+});
+app.get('/a', function(req, res){ 
+  console.log('/a: never called'); 
+});
+app.get('/b', function(req, res, next){ 
+  console.log('/b: route not terminated');
+  next();
+});
+app.use(function(req, res, next){
+  console.log('JO');
+  next();
+});
+app.get('/b', function(req, res, next){
+  console.log('/b (part 2): error thrown' );
+  throw new Error('b failed');
+});
+app.use('/b', function(err, req, res, next){
+  console.log('/b error detected and passed on');
+  next(err);
+});
+app.get('/c', function(err, req){
+  console.log('/c: error thrown');
+  throw new Error('c failed');
+});
+app.use('/c', function(err, req, res, next){
+  console.log('/c: error deteccted but not passed on');
+  next();
+});
+
+app.use(function(err, req, res, next){
+  console.log('unhandled error detected: ' + err.message);
+  res.send('500 - server error');
+});
+
+app.use(function(req, res){
+  console.log('route not handled');
+  res.send('404 - not found');
+});
+
+app.listen(3000, function(){ 
+  console.log('listening on 3000');
+}); */
