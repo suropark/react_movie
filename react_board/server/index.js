@@ -6,9 +6,7 @@ const cookieParser = require("cookie-parser");
 const { auth } = require("./middleware/auth");
 const { User } = require("./models/User");
 const config = require("./config/key");
-const nodemailer = require("nodemailer");
-const smtpTransporter = require("nodemailer-smtp-transport");
-
+const axios = require("axios")
 // application/x-www-form-urlencoded 형태
 app.use(bodyParser.urlencoded({ extended: true }));
 //application/json 형태
@@ -90,9 +88,8 @@ app.get("/api/users/logout", auth, (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
+
+
 
 app.get("/api/hello", (req, res) => {
   res.send("hello react!");

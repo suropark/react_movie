@@ -41,7 +41,7 @@ function Tes({ lang }) {
       <button onClick={clickHandler}>이미지 문자 변환</button>
       <h4>{text}</h4>
     </div>
-  );
+  );    
 }
 
 export default Tes;

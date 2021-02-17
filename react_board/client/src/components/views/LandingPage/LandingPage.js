@@ -5,8 +5,7 @@ import {Link, reactRouter, withRouter} from 'react-router-dom'
 function LandingPage(props) {
   useEffect(() => {
     axios.get("/api/hello").then((response) => {
-      console.log(response.data);
-    });
+      console.log(response.data)})
   }, []);
 
   const onClickHandler = () => {
@@ -20,7 +19,7 @@ function LandingPage(props) {
     })
   }
 
-  
+
 
   return (
     <div
@@ -44,4 +43,4 @@ function LandingPage(props) {
   );
 }
 
-export default withRouter(LandingPage)
+export default withRouter(LandingPage);
