@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# 시험공부를 쉽게 하기 위한 tesseract.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 주어진 글의 빈칸에 들어갈 단어 찾는 문제 생산
 
-## Available Scripts
+ 대학교 언어 전공 시험 문제가 전공서적 내에서 많이 나오는 것 같다. 
+ 
+ 시험 문제 유형 중 하나가 책 안의 글에 빈칸을 두고 들어가기에 알맞은 단어를 쓰는 것이었다.
+ 
+ 모든 문제가 언어에 대한 깊은 이해를 요구하지만 책에서 나오는 내용은 약간의 이해와 암기력만 있으면 가능하다.
+ 
+ 이를 쉽게 하기 위해 tesseract를 이용해 예상 문제 생성기를 만들어보았다.
+ 
+## 
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 1. 이미지URL이나 이미지 파일을 첨부
+ 2. 이미지 -> 문자열 변환
+ 3. 문자열 내 무작위 단어를 빈칸으로 변경
+ 4. 사용자가 작성한 단어가 빈칸에 들어갈 경우 성공~!
+ 
+ 
+ 
+ 
+ 
+ ---
+ ### 미구현 기능
+ 
+  단어의 중요도
