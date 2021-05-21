@@ -19,7 +19,7 @@ function EditorComponent(props) {
   };
 
   const onSubmitHandler = (event) => {
-    props.history.push({ pathname: "/board", state: { detail: content}  });
+    props.history.push({ pathname: "/board", state: { detail: content } });
   };
 
   return (
@@ -34,7 +34,7 @@ function EditorComponent(props) {
         />
         <CKEditor
           editor={ClassicEditor}
-          data="<p>ck에디터 입력</p>"
+          placeholder="하이"
           onReady={(editor) => {
             // You can store the "editor" and use when it is needed.
             console.log("Editor is ready to use!", editor);
