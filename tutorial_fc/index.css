@@ -1,15 +1,12 @@
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: orange;
-  transition: 1s;
+div {
+  font-size: 70px;
 }
-.box:focus {
-  width: 300px;
-  background-color: blue;
+div.hello {
+  color: blue;
 }
-input {
+#hello {
+  /* color: red; */
 }
-input:focus {
-  background-color: orange;
+.hello {
+  color: green;
 }
