@@ -1,19 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = ({ data }) => {
   return (
-    <div>
-      <h1>Event Page</h1>
-      <div>
-        {data.map((e) => {
-          return (
-            <a key={e.id} href={`/events/${e.id}`}>
+    <div className="events_page">
+      {data.map((e) => {
+        return (
+          <Link legacyBehavior key={e.id} href={`/events/${e.id}`}>
+            <a className="card">
               <Image alt={e.title} src={e.image} width={400} height={400} />
               <h2>{e.title}</h2>
             </a>
-          );
-        })}
-      </div>
+          </Link>
+        );
+      })}
     </div>
   );
 };

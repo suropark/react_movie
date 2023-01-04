@@ -1,8 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
-
+import HomePage from "../src/components/home/home-page";
 export default function Home({ title, data }) {
   return (
     <>
@@ -12,26 +9,7 @@ export default function Home({ title, data }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <nav>
-          <img />
-          <a href="/">Home</a>
-          <a href="/events">Events</a>
-          <a href="/about-us">About us</a>
-        </nav>
-      </header>
-      <main className={styles.main}>
-        {data.map((e) => {
-          return (
-            <a key={e.id} href={`/events/${e.id}`}>
-              <Image alt={e.title} src={e.image} width={400} height={400} />
-              <h2>{e.title}</h2>
-              <p>{e.discription}</p>
-            </a>
-          );
-        })}
-      </main>
-      <footer className={styles.footer}></footer>
+      <HomePage data={data} />
     </>
   );
 }
