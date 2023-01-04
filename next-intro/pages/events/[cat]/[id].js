@@ -1,4 +1,4 @@
-import { SingleEvent } from "./single-event";
+import SingleEvent from "./single-event";
 
 const EventPage = (props) => {
   const data = props.data;

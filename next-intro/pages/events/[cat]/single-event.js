@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-export const SingleEvent = ({ data }) => {
+const SingleEvent = ({ data }) => {
   const inputEmail = useRef();
   const params = useSearchParams();
 
@@ -37,3 +37,5 @@ export const SingleEvent = ({ data }) => {
     </div>
   );
 };
+
+export default SingleEvent;
